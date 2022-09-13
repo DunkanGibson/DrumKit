@@ -7,11 +7,32 @@ body{
   display: flex;
   justify-content: space-between;
   margin: 25%;
+  
 }
 
 .key{
-  outline: solid white 3px;
-  width: 85px;
-  height: 85px;
-  /* margin: 0 15px; */
+  outline: solid black 5px;
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.255);
+  /* margin: 0 10px; */
 }
+
+div h1{
+  color: white;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.keytext{
+  color: #ffc600;
+  margin: 10px 0 0 0;
+  display: flex;
+  justify-content: center;
+  
+}
+
