@@ -1,14 +1,30 @@
-const key = document.getElementsByClassName('key');
-const keyTransformStyles = `
-    transform: scale(1.5)
+const key = document.querySelectorAll("div.key");
+
+const keyTransformStylesOnPress = `
+    transform: scale(1.1);
+    outline: solid #ffc600 3px;
 `
 
-key.addEventListner('onkeydown', (event) => {
-    key.style.cssText = keyTransformStyles;
-    alert("Worked")
+const keyTransformStylesOnRelease = `
+    transform: scale(1);
+    outline: solid black 2px;
+`
+
+addEventListener('keydown', e => {
+    
+  if(e.key === "a" || e.key === "s"){
+    key.forEach((keyBoardItem) => {
+        keyBoardItem.style.cssText = keyTransformStylesOnPress;
+      }); 
+    }
 });
 
-console.log("test")
+addEventListener('keyup', e => {
+  key.forEach((keyBoardItem) => {
+    keyBoardItem.style.cssText = keyTransformStylesOnRelease;
+  }); 
+});
+
 
 // function transformKey(){
     
