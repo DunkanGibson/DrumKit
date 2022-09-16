@@ -3,6 +3,7 @@ body{
   background-size: cover;
   display: flex;
   justify-content: space-around;
+  font-family: sans-serif;
 }
 
 .keycontainer{
